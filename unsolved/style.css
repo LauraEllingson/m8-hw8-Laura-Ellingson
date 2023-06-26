@@ -118,7 +118,7 @@ section.hero>button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 300ms;
+  transition: 350ms;
   animation: moveUpDown 1s infinite alternate;
 }
 
@@ -132,7 +132,7 @@ section.hero>button:hover {
   }
 
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
   }
 }
 
