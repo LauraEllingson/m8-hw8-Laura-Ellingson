@@ -25,7 +25,8 @@ h1 {
   font-size: 2.5rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -39,16 +40,32 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  text-decoration: none;
+  transition: transform 350ms;
 }
+
+header a:hover {
+  transform: scale(1.2);
+  color: #F78828
+}
+
 /* end header link animations */
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  transition: color 250ms;
 }
+
+main a:hover {
+  color: #06b3bc;
+  background-color: yellow;
+}
+
 /* end article link transitions */
 
-main > article, nav{
+main>article,
+nav {
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -58,22 +75,23 @@ nav {
   display: flex;
 }
 
-nav > a:not(:first-of-type){
+nav>a:not(:first-of-type) {
   margin-left: 24px;
 }
 
-nav > a.logo {
+nav>a.logo {
   margin-right: auto;
   text-transform: uppercase;
 }
 
-main > section, main > article {
+main>section,
+main>article {
   margin-bottom: 96px;
   box-shadow: 4px 4px 10px var(--gray);
   background-color: var(--white);
 }
 
-main > section.hero {
+main>section.hero {
   height: 300px;
   background-image: url(https://picsum.photos/1920/1000);
   background-size: cover;
@@ -85,7 +103,7 @@ main > section.hero {
   text-align: center;
 }
 
-section.hero > .call-to-action {
+section.hero>.call-to-action {
   font-size: 2rem;
   font-weight: 700;
   text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
@@ -93,13 +111,29 @@ section.hero > .call-to-action {
   margin: 0;
 }
 
-section.hero > button {
+section.hero>button {
   background-color: var(--secondary-color);
   border: none;
   padding: 12px 24px;
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 300ms;
+  animation: moveUpDown 1s infinite alternate;
+}
+
+section.hero>button:hover {
+  color: #FDD219;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 main article {
@@ -108,10 +142,11 @@ main article {
 
 main p {
   line-height: 1.75;
-  margin-bottom: 48px;;
+  margin-bottom: 48px;
+  ;
 }
 
-main > article img {
+main>article img {
   float: left;
   width: 300px;
   height: auto;
